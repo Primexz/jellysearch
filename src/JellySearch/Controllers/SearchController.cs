@@ -41,6 +41,7 @@ public class SearchController : ControllerBase
     [HttpGet("/Artists/AlbumArtists")]
     [HttpGet("/Artists")]
     [HttpGet("/Genres")]
+    [HttpGet("/Studios")]
     [HttpGet("/Search/Hints")]
     public async Task<IActionResult> Search(
         [FromHeader(Name = "Authorization")] string? headerAuthorization,
@@ -169,6 +170,10 @@ public class SearchController : ControllerBase
                     else if (path.EndsWith("/Artists", true, System.Globalization.CultureInfo.InvariantCulture))
                     {
                         filteredTypes.Add("MediaBrowser.Controller.Entities.Audio.MusicArtist");
+                    }
+                    else if (path.EndsWith("/Studios", true, System.Globalization.CultureInfo.InvariantCulture))
+                    {
+                        filteredTypes.Add("MediaBrowser.Controller.Entities.Studio");
                     }
                     else if (path.EndsWith("/AlbumArtists", true, System.Globalization.CultureInfo.InvariantCulture))
                     {
