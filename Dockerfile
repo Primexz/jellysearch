@@ -12,7 +12,7 @@ RUN dotnet publish src/JellySearch/JellySearch.csproj \
     --output /app/publish \
     /p:UseAppHost=false
 
-FROM mcr.microsoft.com/dotnet/aspnet:10.0
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 as production
 
 ENV JELLYFIN_URL=http://jellyfin:8096 \
     JELLYFIN_CONFIG_DIR=/config \
