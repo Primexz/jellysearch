@@ -10,10 +10,8 @@
 
   <ItemGroup>
     <PackageReference Include="MeiliSearch" Version="0.15.0" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.12" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.12" />
     <PackageReference Include="Quartz" Version="3.10.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
 </Project>
