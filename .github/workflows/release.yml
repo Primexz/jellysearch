@@ -29,7 +29,7 @@ jobs:
         uses: docker/metadata-action@v6
         with:
           images: |
-            ghcr.io/primexz/${{ github.event.repository.name }}
+            ghcr.io/Primexz/${{ github.event.repository.name }}
           tags: |
             type=schedule
             type=ref,event=branch
